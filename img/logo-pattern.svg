@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="352" height="256" viewBox="0 0 22 16">
+  <!-- logo_original.blend を正面から見た形(yは下向き) -->
+  <defs><g id="l">
+    <path fill="#ed7629" d="M2 4 0 2 2 0H4L2 2ZM6 0V2L4 4H6L8 2Z"/>
+    <path fill="#fff" d="M6 2V0L4 2ZM2 2V4L4 2Z"/>
+    <path fill="#232a34" d="M2 2 5-1 6 0 4 2ZM4 2H6L3 5 2 4Z"/>
+  </g></defs>
+  <use href="#l" xlink:href="#l" x="1.5" y="2"/>
+  <use href="#l" xlink:href="#l" x="12.5" y="10"/>
+</svg>

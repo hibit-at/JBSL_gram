@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JBSL-gram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="splits" aria-label="スピードラン記録">
+  <ol id="splitRows"></ol>
+  <div id="timer" role="timer" aria-live="off"><b id="timerV">0:00.00</b></div>
+</section>
+<main id="title">
+  <header>
+    <h1>JBSL-gram</h1>
+    <p>ピースを並び替えて目的のかたちをつくろう！目指せ好タイム！<br><small>※精度はあがりません</small></p>
+    <p id="notice" hidden>どれかひとつのステージを選んだ時点で、タイム計測が始まります</p>
+    <div class="record">
+      <button id="result" hidden>★ 全クリア結果を見る</button>
+      <button id="wipe" hidden>記録をリセット</button>
+    </div>
+  </header>
+  <div id="cards"></div>
+</main>
+
+<main id="game" hidden>
+  <section id="boardWrap">
+    <svg id="board" aria-label="盤面"></svg>
+    <p id="msg" role="status"></p>
+  </section>
+  <aside>
+    <div class="topic">
+      <button id="back">← お題をえらぶ</button>
+      <h2><span id="en"></span><small id="jp"></small></h2>
+      <div class="sample"><svg id="sil"></svg><img id="art" alt=""></div>
+    </div>
+    <div class="traybox">
+      <h3>使用パネル <span id="count"></span></h3>
+      <div id="tray"></div>
+    </div>
+    <div class="ctl">
+      <button id="rotL">↺ 左回転 <kbd>Q</kbd></button>
+      <button id="rotR">右回転 ↻ <kbd>E</kbd></button>
+      <button id="cancel">キャンセル <kbd>Esc</kbd></button>
+      <button id="ok">決定 <kbd>Enter</kbd></button>
+      <button id="undo">元に戻す <kbd>Ctrl+Z</kbd></button>
+    </div>
+    <button id="reset">このお題を置き直す</button>
+  </aside>
+  <div id="clear" hidden>
+    <div class="box" role="dialog" aria-labelledby="clearT">
+      <h2 id="clearT">完成！</h2>
+      <img id="clearArt" alt="">
+      <p id="clearName"></p>
+      <div><button id="see">盤面を見る</button><button id="next">ほかのお題へ</button></div>
+    </div>
+  </div>
+</main>
+<div id="cutin" aria-hidden="true" hidden></div>
+<dialog id="all" aria-labelledby="allT">
+  <div id="confetti" aria-hidden="true"></div>
+  <div class="allbox">
+    <p class="sub">全クリア！</p>
+    <h2 id="allT">おめでとう！</h2>
+    <div id="allArts"></div>
+    <p>6つのお題をすべて完成させました</p>
+    <p class="timeLabel">クリアタイム</p>
+    <p id="allTime"></p>
+    <div class="btns"><button id="tweet">ツイートする</button><button id="saveImg">画像を保存</button><button id="copyImg">画像をコピー</button></div>
+    <p id="shareMsg" role="status"></p>
+    <div class="btns"><button id="allBack">お題一覧へ</button><button id="again">最初から挑戦する</button></div>
+  </div>
+</dialog>
+<script src="game.js"></script>
+</body>
+</html>
